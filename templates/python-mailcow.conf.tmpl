@@ -1,0 +1,9 @@
+[defaults]
+server = {{ .Env.SERVER }}
+ssl_verify = True
+timeout = {{ default .Env.TIMEOUT "15" }}
+
+[{{ .Env.SERVER }}]
+url = https://{{ .Env.SERVER }}
+token = {{ .Env.TOKEN }}
+
